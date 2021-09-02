@@ -48,7 +48,7 @@ public class DownloadReceiver extends BroadcastReceiver {
             mSystemFacade = new RealSystemFacade(context);
         }
         String action = intent.getAction();
-        System.out.println("cgp 接收到网络改变=" + "action="+action);
+       // System.out.println("cgp 接收到网络改变=" + "action="+action);
         if (action.equals(Intent.ACTION_BOOT_COMPLETED)) {
             startService(context);
         } else if (action.equals(ConnectivityManager.CONNECTIVITY_ACTION)) {
@@ -60,7 +60,7 @@ public class DownloadReceiver extends BroadcastReceiver {
         } else if (action.equals(Constants.ACTION_RETRY)) {
             startService(context);
         }else if (action.equals(Constants.ACTION_NETWORK_AVAILABLE)) {
-            System.out.println("cgp 接收到网络改变=" + "onReceive");
+            //System.out.println("cgp 接收到网络改变=" + "onReceive");
             startService(context);
         }  else if (action.equals(Constants.ACTION_OPEN)
                 || action.equals(Constants.ACTION_LIST)
