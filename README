@@ -1,1 +1,11 @@
 多线程下载框架，待完善
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+	dependencies {
+    	        implementation 'com.github.easyandroid-cc:EasyDownloadManager:Tag'
+    	}
